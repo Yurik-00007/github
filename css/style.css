@@ -1,4 +1,25 @@
+/* &display=swap&subset=cyrillic-ext */
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap&subset=cyrillic-ext");
 /* Обнуление стилей */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 *,
 *,
 ::before,
@@ -35,3 +56,16 @@ img{
 	vertical-align: top;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+html{
+	font-size: 12px;
+}
+body {
+    font-family: 'Gilroy';
+	color:rgb(0, 0, 0);
+	font-size: 16px;
+	line-height: 120%;
+}
+
+.text{
+	font-family: Poppins;
+}

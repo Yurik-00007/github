@@ -117,3 +117,10 @@ footer{
 a {
 	text-decoration: overline;
 }
+
+.example-block {
+	padding: 10px 20px 30px 5px;
+	border: 1px solid #000;
+}
+.example-string {
+}

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Satisfy';
+    src: url('../fonts/Satisfy-Regular.woff2') format('woff2'),
+        url('../fonts/Satisfy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* Обнуление стилей */
 *,
 *,
@@ -35,92 +44,76 @@ h6 {
 img {
 	vertical-align: top;
 }
+html{
+	font-family: 'Satisfy';
+	font-size: 16px;
+	color: #000;
 
-p{
-	color:brown;
 }
-div p.text{
-	color:green;
-}
+body {
+	line-height: 1;
+		line-height: 2rem;
 
-*.text{
-	color:red;
-}
 
-.biggreen{
-	font-size: 30px;
-	font-size: 20px;
-	color: rgb(219, 124, 0);
-}
+	}
 
-span.biggreen {
-	font-size: 30px;
-	color: rgb(131, 3, 63);
-}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-span.biggreen {
-	color:red;
-}
-/* цвет  */
-div.block{
-	color:blue;
-	font-size: 15px;
-	border: 1px solid black;
-}
-/* Название шрифта и его семья */
-.arial{
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-/* размер и наклон теста */
-.fz30{
-	font-size: 30px;
-	font-style:italic;
-}
-/* толшина текста по умолчанию 400 */
-.font700{
+h1{
+	font-size: 40px;
 	font-weight: 700;
 }
-/* расположение текста */
-.textright{
-	text-align: justify;
+p{
+ color: #000;
+ text-indent: 20px;
 }
-/* подчеркивание */
-.decoration{
-/* text-decoration: overline; */
-/* text-decoration: underline; */
-text-decoration: line-through;
-/* text-decoration: none; */
+.text{
+	font-size: 30px;
+	color:yellow;
+	text-shadow: 3px 3px 2px rgba(13, 224, 111, 0.9);
 }
-/* тень */
-p.shadow{
-	color:black;
-	text-shadow: 1px 5px 2px #000;
+
+#id1{
+	color: red;
 }
-/* регистр записи */
-.uppercase{
-	text-transform: lowercase;
-	/* text-transform: capitalize; */
-	/* text-transform: uppercase; */
-	/* text-transform: none; */
+
+.idclass{
+	color: darkmagenta;
 }
-/* устанавливает отступ "типо красной страки" */
-.ident{
-	text-indent: 50px;
+
+p span {
+	color: #c30f9c;
+	text-decoration: line-through;
 }
-/* интервал между буквами */
-.lspace{
-	letter-spacing: 2px;
+p span.span {
+	color: #f90019;
 }
-/* интервал между буквами */
-.wspace {
-	word-spacing: 5px;
+
+.div .text{
+	color: rgba(0, 255, 255, 0.753);
+	text-align:center;
 }
-/* управляет свойствами пробеов между слвами */
-.whitespase{
-	/* white-space: nowrap; */
-	white-space: normal;
+
+.content ~ *{
+	color: rgb(214, 16, 55);
+	text-align: center;
 }
-/* устанавливает межстрочный интервал текста */
-.lineheight{
-	line-height: 100px;
+
+font-face{
+font-family: 'Satisfy';}
+
+nav{
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 5px;
+	word-spacing: 15px;
+}
+footer{
+	font-size: 20px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: overline;
 }

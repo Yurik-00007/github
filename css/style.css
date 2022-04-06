@@ -1,41 +1,6 @@
 /* &display=swap&subset=cyrillic-ext */
-/* @import url("https://fonts.googleapis.com/css?family=Poppins:regular,700&display=swap&subset=cyrillic-ext"); */
-/* @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap&subset=cyrillic-ext'); */
 /* Обнуление стилей */
-/* @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
-        url('../fonts/Gilroy-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
-        url('../fonts/Gilroy-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-} */
-@font-face {
-    font-family: 'Exo 2';
-    src: url('../fonts/Exo2-Regular.woff2') format('woff2'),
-        url('../fonts/Exo2-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Exo 2';
-    src: url('../fonts/Exo2-Italic.woff2') format('woff2'),
-        url('../fonts/Exo2-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
 
 
 
@@ -47,6 +12,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
 }
 
 li {
@@ -74,54 +40,94 @@ h6 {
 img{
 	vertical-align: top;
 }
+html,
+body{
+	height: 100%;
+}
 html{
 	font-size: 16px;
 }
 body {
 	line-height: 1;
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-html{
-	font-family: 'Exo 2', sans-serif;
-	font-style: italic;
-	font-size: 12px;
 }
-body {
-     font-family: '';
-	/* /* color:rgb(0, 0, 0); */
-	font-size: 0.5rem;
-	line-height: 1;
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.block {
+	font-size: 50px;
+	background-color: green;
+	color: black;
+	/* padding: 50px; */
+	margin: 50px;
+	width: 600px;
+
+
+
 }
 
-h1{
-	font-size: 50px;
-	text-shadow: 1px 1px 1px #000;
+.inline{
+	 font-size: 50px;
+	background-color: brown;
+	color: white;
+	/* padding: 50px; */
+	line-height: 200px;
+	margin: 50px;
+	width: 600px;
+	min-width: 600px;
+	max-width: 600px;
+
+	height: 100px;
+	min-height: 500px;
+	max-height: 500px;
+	overflow: hidden;
+
 }
-.text{
-text-shadow: -10px -10px 5px rgba(113, 123, 199, 0.575);
+.image{
+	/* width: 100%; */
+	/* height: 500px; */
+	padding: 50px; 
+	background-color: green;
+	margin: 100px;
+
+}
+/* .block_2{
+	font-size: 50px;
+	background-color:gray;
+	color:white;
+	max-width:auto;
+	padding: 50px;
+margin: 10px -50px;}
+
+.block_3{
+	font-size: 50px;
+	background-color:rgba(165, 42, 42, 0.524);
+	color:white;
+} */
+
+.link{
 	font-size: 20px;
-	font-weight: 700;
-	color: rgba(89, 86, 93, 0.646);
-	/* text-align: center; */
-	font-family: "Exo 2";
-	text-transform: none;
-	line-height:130%;
-	letter-spacing: 5px;
-	word-spacing: 30px;
-	text-indent: 30px;
-white-space:nowrap;
+	color: red;
+	margin: 0px 0px 100px 0px;	
+	/* padding: 0px 0px 100px 0px; */
+	display: inline-block;
+	background-color: pink;
+}
+header{
+	display: block;
 }
 
 .image{
-	text-align: center;
-}
-.link{
-	text-decoration: overline;
-}
-span{
-	text-decoration: line-through;
+	display: inline-block;
 }
 
-.menu a{
+.text{
+	/* display: none; */
+	visibility: hidden;
+}
+.content{
+	color: red;
+	display: inline;
 
-	text-transform: uppercase;
 }

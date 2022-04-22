@@ -3,99 +3,221 @@
 берем в ковычки наш шрифт
 */
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap");
-
- body{
-	font-family: Roboto;
-	color: #4B4B4B;
-	background: #F5F5F5;
-	background: url('../img/bez.png') 0 0 repeat;
-}
-
-.whoweare {
-	padding: 0px 0px 150px 0px;
-}
-.whoweare__container {
-	max-width: 1020px;
-	margin: 0px auto;
-	border: 1px solid transparent;
-	padding: 100px 87px 0px 87px;
-	background:white url('../img/Gears.png') 100% 0 no-repeat;
-}
-.whoweare__content {
-}
-.whoweare__subtitle {
-	font-weight: 700;
-	font-size: 12px;
-	line-height: 28px;
-	letter-spacing: 2.5px;
-	text-transform: uppercase;
-	margin: 0px 0px 33px 0px;
-	background: url('../img/icon.png') 0 0 no-repeat;
-	padding: 0px 0px 0px 30px;
-}
-.whoweare__title {
-	max-width: 583px;
-	font-weight: 900;
-	font-size: 36px;
-	line-height: 42px;
-	color: #02133C;
-	margin: 0px 0px 33px 0px;
-}
-.whoweare__text {
-	line-height: 24px;
-	letter-spacing: 0.15px;
-	max-width: 846px;
-	font-size: 16px;
-	margin: 0px 0px 54px 0px;
-}
-.whoweare__image {
-	margin: 0px 0px -120px 0px;
-}
-.whoweare__image img {
-max-width: 100%;
-} 
-/* 
-.block{
+body{
+	font-family:Arial, Helvetica, sans-serif;
 	font-size: 30px;
-	color:white;
-	background-color: rgba(255, 0, 0, 0.627);
+}
+
+.block {
 	padding: 30px;
-	background-image: url("../img/icon.png");
-	background: rgb(131,58,180);
-background: linear-gradient(270deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 69%, rgba(252,176,69,0) 100%);
-	универсальное свойство
-	background: rgba(0, 128, 0, 0.457);
-	background: red url("../img/01.png") 50%/cover no-repeat fixed;
-	background-repeat: repeat; 
-		background-repeat: no-repeat;
-			background-repeat: no-repeat;
-			background-position: top right;
-			background-size: cover;
-			background-attachment:fixed;
-
-			background: linear-gradient(to bottom, rgba(0,0,0,0.65) 37%,rgba(0,0,0,0.65) 51%,rgba(0,0,0,0.65) 68%,rgba(0,0,0,0) 100%), bottom left no-repeat, url("../img/image_1.jpg") 0px 0px/ 100px no-repeat , url("../img/01.png") 50%/cover no-repeat fixed;
+	background-color: rgb(117, 117, 117);
+	display: inline-block;
+	margin: 0px 0px 50px 0px;
 }
 
-.block__empty {
-background: url('../img/image_1.jpg') 0 0  no-repeat;
- width: auto;
-height: 500px;		 
+.block a{
+	margin: 0px 0px 50px px;
+}
+/* .block:hover .link{
+	opacity: 1;
+	visibility: visible;
 }
 
-ul{
-	margin: 20px 0px;
-	padding: 0px 0px 0px 20px;
+.link {
+	color: yellow;
+		opacity: 0;
+	visibility: hidden;
+
+} */
+.link:hover{
+	color: rgb(255, 255, 255);
 }
 
-
-ul li{
-	margin: 0px 0px 20px 0px;
-	background: url('../img/icon.png') 0 0/15px no-repeat;
-	padding: 7px 0px 0px 30px;
-	font-size: 12px;
-	min-height: 50px;
+.link:visited{
+	color: yellowgreen;
 }
-*/
+
+.link:active{
+	color: red;
+}
+
+/* .button{
+	border-radius: 5px;
+	padding: 10px 20px;
+	color:white;
+	background-color: pink;
+	box-shadow: 0px 8px 0px rgb(140, 9, 124);
+}
+
+.button:hover{
+	background-color: rgb(205, 95, 207);
+}
+
+.button:active{
+	top: 4px;
+	box-shadow: 0px 4px 0px rgb(147, 59, 138);
+} */
+
+.link:focus{
+outline: 5px dashed pink;
+color:blue;
+}
+
+.window{
+	color: white;
+	background-color: rgb(57, 231, 30);
+	padding: 20px;
+	margin: 10px 20px 30px 40px;
+	display: none;
+}
+.window:target{
+	display: block;
+}
+
+h2:target{
+	background: #fc0; /* Цвет фона */
+    padding: 3px; 
+}
+
+.text {
+/* margin: 50px 0px 50px 0px;		 */
+}
+
+.text  p{
+	/* margin: 0px 0px 20px 0px; */
+}
+
+.list{
+
+}
+
+.list li{
+/* margin: 0px 0px 20px 0px; */
+}
+
+/* .text  p:first-of-type{
+	color: red ;
+}
+.text  p:first-child{
+	color: rgb(0, 255, 42) ;
+} */
+.text  *:first-child{
+	color: rgb(0, 255, 42) ;
+}
+
+/* .text p:last-child{
+	color:orange
+} */
+
+/* .text p:last-of-type{
+	color:orange
+} */
+
+/* .text *:last-child{
+	margin-bottom: 0;
+} */
+
+.text p:nth-child(odd){
+	color:violet;}
+
+.text p{
+	margin: none;
+	padding: none;
+}
+
+	.text *:not(:last-child){
+		margin: 0px 0px 40px 0px;
+		
+	}
+
+.text p:nth-child(2):hover{
+	color: green;
+}
+
+.text p:nth-child(1),
+.text p:nth-child(2){
+	border: 1px solid #000;
+}
+
+.content{
+	margin: 0px 0px 30px 0px;
+	text-indent: 30px;
+}
+
+/* .content:first-line{
+	color:red;
+} */
+
+.content::first-letter{
+	color: red;
+	font-size: 30px;
+}
+
+.content::before{
+	content: "(";}
+
+	.content::after{
+	content: ")";}
 
 
+	.title{
+		margin: 0px 0px 20px 0px;
+		font-weight: 900;
+		font-size: 40px;
+		display: inline-block;
+	}
+
+	.title::before{
+		background-color: rgba(0, 128, 0, 0.542);
+		height: 2px;
+width: 200%;
+margin: 15px 0px 0px 0px;
+display: block;
+content:"";
+	}
+
+	.list{
+		margin: 0px 0px 30px 0px;
+	}
+	.list li{
+		padding: 0px 0px 0px 30px;
+	}
+	.list li::before{
+		content:"";
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		background:red;
+		vertical-align: middle;
+		margin: 4px 15px 0px -30px;
+		border-radius:50%
+
+	}
+
+	.list li:hover::before{
+		background: blue;
+		border-radius: 0;
+	}
+
+	.list li:hover::after{
+		content: "...";
+color:red;
+	}
+
+	.num-list{
+		counter-reset: item;
+	}
+
+	.num-list li:not(:last-child){
+		margin: 0px 0px 20px 0px;
+	}
+
+	.num-list li::before{
+		counter-increment: item;
+		content:counter(item)")";
+		display: inline-block;
+		vertical-align: middle;
+color:red;
+margin: 0px 20px 0px 0px;
+font-weight: 700;
+	}

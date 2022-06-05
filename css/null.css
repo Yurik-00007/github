@@ -52,8 +52,8 @@ body {
 }
 .wrapper{
 	min-height: 100%;
-	/* overflow: hidden; */
-	/* padding: 50px; */
+	overflow: hidden; 
+	 padding: 50px;
 
 }
 

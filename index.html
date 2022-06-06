@@ -16,15 +16,91 @@
 		<header class="header"></header>
 		<main class="main">
 
+			<form method="get" class="main_form form" action="#">
+				<div class="form__line">
+					<div class="file">
+						<input id="file_1" type="file" class="file__input">
+						<label for="file_1" class="file__lable">Выбрать файл</label>
+					</div>
+				</div>
+				<div class="form__line">
+					<!-- sel -->
+					<select name="select" class="form__select">
+						<option value="1">Пункт №1</option>
+						<option value="2">Пункт №2</option>
+						<option value="3" selected>Пункт №3</option>
+						<option value="4">Пункт №4</option>
+					</select>
+				</div>
+
+				<div class="form__line">
+					<textarea autocomplete="off" name="text" class="form__textarea"></textarea>
+				</div>
+
+				<div class="form__line">
+					<label for="username"  class="form__lable">Введите имя</label>
+					<input placeholder="Введите имя!!" id="username" autocomplete="off" type="text" name="username" class="form__input">
+				</div>
+				<div class="form__line">
+					<div class="checkbox">
+						<input id="car" autocomplete="off" type="checkbox" name="car" class="checkbox__input">
+						<label for="car" class="checkbox__label">Автомобиль</label>
+
+					</div>
+					<!-- <input id="car" autocomplete="off" type="checkbox" name="car" class="form__input"> -->
+				</div>
+
+						<div class="form__line">
+							<div class="switcher">
+								<input id="switcher" autocomplete="off" type="checkbox" name="switcher" class="switcher__input">
+								<label for="switcher" class="switcher__label"></label>
+						
+							</div>
+							<!-- <input id="car" autocomplete="off" type="checkbox" name="car" class="form__input"> -->
+						</div>
+
+				<div class="form__line">
+					<div class="radiobuttons">
+						<div class="radiobuttons__item">
+							<input id="color_1" autocomplete="off" type="radio" name="color" class="radiobuttons__input">
+							<label for="color_1" class="radiobuttons__label">
+								Красный
+							</label>
+						</div>
+						<div class="radiobuttons__item">
+
+							<input id="color_2" autocomplete="off" type="radio" name="color" class="radiobuttons__input">
+							<label for="color_2" class="radiobuttons__label">
+								Желтый
+							</label>
+						</div>
+						<div class="radiobuttons__item">
+							<input id="color_3" autocomplete="off" type="radio" name="color" class="radiobuttons__input">
+							<label for="color_3" class="radiobuttons__label">
+								Зеленый
+							</label>
+						</div>
+					</div>
+					<!-- <input id="car" autocomplete="off" type="checkbox" name="car" class="form__input"> -->
+				</div>
+
+				<button type="submit" class="form__button">Отправить</button>
+			</form>
+
+
 			<form action="#">
 				<input disabled autocomplete="off" placeholder="Строка" maxlength="10" name="string" required type="text"
 					value="" class="input">
 				<br>
+				<label for="input_01">Я подпись к полю</label>
+				<input tabindex="3" id="input_01" autocomplete="off" placeholder="Строка" maxlength="10" name="string"
+					required type="text" value="" class="input">
+				<br>
 				<input autocomplete="off" placeholder="Число" maxlength="1" name="number" required type="number" value=""
 					class="input">
 				<br>
-				<input autocomplete="off" placeholder="Телефон 89884354428" maxlength="11" name="phone" required type="tel"
-					value="" class="input">
+				<input tabindex="-1" autocomplete="off" placeholder="Телефон 89884354428" maxlength="11" name="phone"
+					required type="tel" value="" class="input">
 				<br>
 				<input autocomplete="off" placeholder="Email" maxlength="20" name="email" required type="email" value=""
 					class="input">
@@ -47,10 +123,30 @@
 					<input autocomplete="off" name="color" type="radio" value="no" class="input">Зеленый
 					<input disabled checked autocomplete="off" name="color" type="radio" value="no" class="input">Красный
 				</div>
-				<textarea name="area"
-					id="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla amet quaerat, doloremque non quia quibusdam placeat dignissimos, sint ad distinctio! Accusantium itaque culpa vel totam assumenda, aspernatur illo dolorum.</textarea>
+				<textarea name="area" id=""
+					tabindex="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla amet quaerat, doloremque non quia quibusdam placeat dignissimos, sint ad distinctio! Accusantium itaque culpa vel totam assumenda, aspernatur illo dolorum.</textarea>
 				<br>
-				<input multiple placeholder="файл" name="file" type="file" class="input">Красный
+				<input multiple accept=".jpg, .png" placeholder="файл" name="file" type="file" class="input">Красный
+				<br>
+				<input required value="123456" placeholder="пароль" name="password" type="password" class="input">Красный
+				<br>
+				<input required value="123456" placeholder="пароль" name="password" type="range" class="input">Красный
+				<div>
+					<select multiple name="form[]" class="form">
+						<option value="1">Пункт №1</option>
+						<option value="2">Пункт №2</option>
+						<option value="3" selected>Пункт №3</option>
+						<option value="4" selected>Пункт №4</option>
+					</select>
+				</div>
+				<div class="button">
+					<button type="button">Я кнопка</button>
+					<br>
+					<button type="reset">Я reset</button>
+					<br>
+					<button type="submit">Отправить</button>
+
+				</div>
 			</form>
 
 

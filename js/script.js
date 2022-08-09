@@ -19,26 +19,27 @@ document.body.insertAdjacentHTML(
 	`<form name="some" class="some-form" action="#"></form>`
 );
 */
-const mainForm = document.forms.main;
+// const mainForm = document.forms.main;
 // console.log(mainForm.elements);
 
 // /*
-const mainFormInput = mainForm.elements.nameInput;
+// const mainFormInput = mainForm.elements.nameInput;
 // console.log(mainFormInput.form);
 // */
-const mainFormRadioButtons = mainForm.nameRadio;
+// const mainFormRadioButtons = mainForm.nameRadio;
 //const mainFormRadioButtons = mainForm.elements.nameRadio;
 // console.log(mainFormRadioButtons);
 // console.log(mainFormRadioButtons.form);
 // почему то не работает
 
-const mainFormTextarea = mainForm.nameTextarea;
+// const mainFormTextarea = mainForm.nameTextarea;
 /*
 console.log(mainFormInput.value);
 console.log(mainFormTextarea.value);
 mainFormInput.value = 'Пока!';
 mainFormTextarea.value='До встречи!';
 */
+/*
 const mainFormCheckBox = mainForm.nameCheck;
 const mainFormFile = mainForm.nameFile;
 
@@ -50,42 +51,70 @@ console.log(mainFormRadioButtons[1].checked);
 console.log(mainFormCheckBox.value);
 console.log(mainFormCheckBox.checked);
 
-function multiply(a, b) {
-	return a * b;
-}
-console.log(multiply(2, 3));
+mainFormRadioButtons[0].value = "left";
+mainFormRadioButtons[1].value = "right";
+mainFormRadioButtons[1].checked = true;
 
-let arr = [-2.398];
+mainFormCheckBox.value="save";
+mainFormCheckBox.checked = true;
+
+mainFormFile.value="123";
+*/
 /*
-function arraySum(array) {
-	var sum = 0;
-	for (var i = 0; i < array.length; i++) {
-		sum += array[i];
-	}
-	console.log(sum);
-}
-arraySum(arr);
+const mainFormSelect=mainForm.nameSelect;
+console.log(mainFormSelect.options);
+
+const mainFormSelectIndex=mainFormSelect.selectedIndex;
+console.log(mainFormSelectIndex);
+
+const mainFormSelectValue=mainFormSelect.value;
+console.log(mainFormSelectValue);
+
+const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
+console.log(mainFormSelectText);
+*/
+// const mainForm = document.forms.main;
+// const mainFormSelect = mainForm.nameSelect;
+// const mainFormSelectIndex = mainFormSelect.selectedIndex;
+// mainFormSelect.options[1].selected=true;
+// console.log(mainFormSelect.options[2].index);
+// console.log(mainFormSelect.options[2].text);
+
+// mainFormSelect.selectedIndex=2;
+// mainFormSelect.value=1;
+/*
+let newOption = new Option('100', '4', true, true);
+mainFormSelect.append(newOption);
+
+let selectedOptions = Array.from(mainFormSelect.options).filter(option => option.selected).map(option => option.value);
+console.log(selectedOptions);
 */
 
-function sum(numbers1) {
-	"use strict";
-	let result = 0;
-	for (let i = 0; i < numbers1.length; i++) {
-		result += numbers1[i];
-	}
-	console.log(result);
-}
-sum(arr);
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
-function hero(bullets, dragons) {
-	//Get Coding!
-	if (bullets >= dragons) {
-		console.log(true);
-	} else {
-		console.log(false);
-	}
-}
-hero(4,4);
+const mainFormInputPlaceholder = mainFormInput.placeholder;
+
+mainFormInput.addEventListener('focus', (e) => mainFormInput.placeholder = '');
+
+mainFormInput.addEventListener('blur', (e) => mainFormInput.placeholder = mainFormInputPlaceholder);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //ДОМАШКА

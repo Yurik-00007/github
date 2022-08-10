@@ -90,26 +90,123 @@ let selectedOptions = Array.from(mainFormSelect.options).filter(option => option
 console.log(selectedOptions);
 */
 
+// const mainForm = document.forms.main;
+// const mainFormInput = mainForm.nameInput;
+
+// const mainFormInputPlaceholder = mainFormInput.placeholder;
+
+// mainFormInput.addEventListener('focus', (e) => mainFormInput.placeholder = '');
+
+// mainFormInput.addEventListener('blur', (e) => mainFormInput.placeholder = mainFormInputPlaceholder);
+/*
+mainFormInput.focus();
+setInterval(() => {
+	mainFormInput.focus();
+},3000);
+
+
+setInterval(() => {
+	mainFormInput.blur();
+}, 6000);
+*/
+/*
+const lesson = document.querySelector('.lesson');
+
+lesson.addEventListener('focus', function (e) {
+	lesson.classList.add('_focus');
+	console.log('DIV lesson в фокусе!');
+});
+
+lesson.addEventListener('blur', function (e) {
+	lesson.classList.remove('_focus');
+});
+
+console.log(document.activeElement);
+*/
+/*
+const mainForm = document.forms.main;
+
+mainForm.addEventListener('focusin', (e) => {
+	mainForm.classList.add('_active');
+},
+
+// {"capture":true}
+
+);
+*/
+/*
+const mainForm = document.forms.main;
+
+const mainFormInput = mainForm.nameInput;
+const mainFormSelect = mainForm.nameSelect;
+const mainFormFile = mainForm.nameFile;
+
+mainFormInput.addEventListener('change', () => {
+	console.log('Сработало change в input');
+});
+mainFormSelect.addEventListener('change', () => {
+	console.log('Сработало change в select');
+});
+mainFormFile.addEventListener('change', () => {
+	console.log('Сработало change в file');
+});
+*/
+/*
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
 
-const mainFormInputPlaceholder = mainFormInput.placeholder;
+mainFormInput.addEventListener('input', () => {
+	console.log(`value: ${mainFormInput.value}`);
+});
+*/
 
-mainFormInput.addEventListener('focus', (e) => mainFormInput.placeholder = '');
+const txtItem = document.querySelector('.textarea__item');
+const txtItemLimit = txtItem.getAttribute('maxlength');
+const txtCounter = document.querySelector('.textarea__counter span');
 
-mainFormInput.addEventListener('blur', (e) => mainFormInput.placeholder = mainFormInputPlaceholder);
+txtCounter.innerHTML = txtItemLimit;
+txtItem.addEventListener('input', tetSetCounter);
+
+function tetSetCounter() {
+	const txtCounterResult = txtItemLimit - txtItem.value.length;
+	txtCounter.innerHTML = txtCounterResult;
+}
+
+const mainForm = document.forms.main;
+const mainFormInput = mainForm.nameInput;
 
 
+/*
+mainFormInput.addEventListener('copy', (e) => {
+	console.log('Копируем');
+});
 
+mainFormInput.addEventListener('paste', (e) => {
+	console.log('Вставляем');
+});
 
+mainFormInput.addEventListener('cut', (e) => {
+	console.log('Вырезаем');
+});
 
+mainFormInput.addEventListener('paste', function (e) {
+	console.log('Нельзя вставить');
+	e.preventDefault();
+});
+*/
+/*
+mainForm.addEventListener('submit', (e) => {
+	console.log('Форма отправляется...');
+	if (!mainFormInput.value) {
+		console.log('Поле nameInput не заполнено');
+		e.preventDefault;
+	}
+})
+*/
 
-
-
-
-
-
-
+mainFormInput.addEventListener('blur', function(e){
+	mainForm.submit();
+});
 
 
 

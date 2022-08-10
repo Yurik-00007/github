@@ -130,3 +130,14 @@ button:hover {
 	padding: 10px 0px 0px 0px;
 	color: red;
 }
+.textarea__item {
+	width: 300px;
+	height: 150px;
+	padding: 10px;
+	font-size: 18px;
+	color: #fff;
+	background-color: rgb(44, 43, 43);
+}
+.textarea__counter {
+		margin: 0px 0px 30px 0px;
+}

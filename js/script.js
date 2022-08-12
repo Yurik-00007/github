@@ -159,7 +159,7 @@ mainFormInput.addEventListener('input', () => {
 	console.log(`value: ${mainFormInput.value}`);
 });
 */
-
+/*
 const txtItem = document.querySelector('.textarea__item');
 const txtItemLimit = txtItem.getAttribute('maxlength');
 const txtCounter = document.querySelector('.textarea__counter span');
@@ -174,7 +174,7 @@ function tetSetCounter() {
 
 const mainForm = document.forms.main;
 const mainFormInput = mainForm.nameInput;
-
+*/
 
 /*
 mainFormInput.addEventListener('copy', (e) => {
@@ -203,12 +203,49 @@ mainForm.addEventListener('submit', (e) => {
 	}
 })
 */
-
+/*
 mainFormInput.addEventListener('blur', function(e){
 	mainForm.submit();
 });
+*/
+
+// const regexp = /Игорь/;
+// const str = 'Привет, меня зовут Игорь. Мне 23 года.';
+
+// const regexp = /Игорь\./;
+// const str = 'Привет, меня зовут Игорь! Мне 23 года.';
+
+// const regexp = /\d\d\S/;
+// const str = 'Привет, меня зовут Игорь! Тебе 20sf,? Мне 23 года.';
+
+// const regexp = /[^ЮИ]ра/;
+// const str = 'Это Ира и Юра сказали Ура!';
+// const regexp = /[^а-вг-ж]/;
+// const str = 'абвгдежзийклмнопрстуфчцхъыьэюя';
+
+// const regexp = /\d{3,4}?/;
+// const str = 'У меня тлько 50 не хватает еще 10000';
+
+// const regexp = /\d{3,}?/;
+// const str = 'У меня тлько 50 не хватает еще 10000';
+
+// const regexp = /colou?r/;
+// const str = 'What color is the car?';
+
+// const regexp = /colou?r/;
+// const str = 'What colour is the car?';
+
+// const regexp = /\d*?/;
+// const str = '0123456789';
+
+const regexp = /\d+?/;
+const str = '0123456789'; 
 
 
+
+
+const result = str.match(regexp);
+console.log(result);
 
 
 

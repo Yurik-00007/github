@@ -208,6 +208,48 @@ mainFormInput.addEventListener('blur', function(e){
 	mainForm.submit();
 });
 */
+/*
+const mainForm=document.forms.main;
+const mainFormInput=mainForm.nameInput;
+mainForm.addEventListener('submit',function(e) {
+	if(emailTest(mainFormInput)){
+		mainFormInput.parentElement.insertAdjacentHTML(
+			'beforeend',
+			`<div class='main-form__error'>
+			Введите email</div>`
+		);
+		e.preventDefault();
+	}
+});
+
+mainFormInput.addEventListener('focus',function(e) {
+	if(mainFormInput.nextElementSibling){
+		mainFormInput.nextElementSibling.remove();
+	}
+});
+
+function emailTest(input){
+	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+}
+*/
+
+const mainForm = document.forms.main;
+const mainFormFile = mainForm.nameFile;
+
+mainFormFile.addEventListener("change", function (e) {
+	let selectedFile = mainFormFile.files[0];
+
+	// Получаем URL изображения
+	let fileUrl = URL.createObjectURL(selectedFile);
+
+	mainFormFile.parentElement.insertAdjacentHTML(
+		"beforeend",
+		`<div class="main-form__image">
+			<img alt="" title="${selectedFile.name}" src="${fileUrl}">
+		</div>`
+	);
+});
+
 
 // const regexp = /Игорь/;
 // const str = 'Привет, меня зовут Игорь. Мне 23 года.';
@@ -238,14 +280,89 @@ mainFormInput.addEventListener('blur', function(e){
 // const regexp = /\d*?/;
 // const str = '0123456789';
 
-const regexp = /\d+?/;
-const str = '0123456789'; 
+// const regexp = /\d+?/;
+// const str = '0123456789'; 
+// const regexp= /\d{6}/;
+// const str ='1,2, 3, 4,  5,6  ,  7  ,8';
+// const str = '... телефон 123456. Его почта...';
+
+// console.log(str.match(regexp));
+
+// const result = str.split('regexp');
+// const result = str.split(',');
+// const result = str.search(regexp);
+// console.log(result);
+
+/*
+const regexp = /./g;
+const str = 'a\nb';
+*/
+/*
+const regexp = /./gs;
+const str = 'a\nb';
+*/
+/*
+const regexp = new RegExp('.','gs');
+const str = 'a\nb';
+*/
+/*
+const regexp = /кот/gi;
+const str = 'Кот теракотового цвета кушает котлету.';
 
 
 
 
-const result = str.match(regexp);
+
+
+// /*
+const result = Array.from(str.matchAll(regexp));
 console.log(result);
+console.log(regexp.lastIndex);
+
+let result=regexp.exec(str);
+console.log(result, regexp.last);
+result=regexp.exec(str);
+console.log(result, regexp.last);
+result=regexp.exec(str);
+console.log(result, regexp.last);
+result=regexp.exec(str);
+console.log(result, regexp.last);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

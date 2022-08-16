@@ -1,955 +1,237 @@
 /*
-
-console.log(document.forms);
-
-const mainForm = document.forms[0];
-console.log(mainForm);
-
-const mainForm1=document.forms.main;
-console.log(mainForm1);
+function removeChar(str) {
+	//You got this!
+	let result = str.slice(1, (str.length-1));
+	//console.log(result);
+	return result;
+}
+removeChar('eloquent');
 */
-
+// function DNAtoRNA(dna) {
+// create a function which returns an RNA sequence from the given DNA sequence
 /*
-console.log(document.querySelectorAll('form'));
-
-console.log(document.forms);
-
-document.body.insertAdjacentHTML(
-	"beforeend",
-	`<form name="some" class="some-form" action="#"></form>`
-);
-*/
-// const mainForm = document.forms.main;
-// console.log(mainForm.elements);
-
-// /*
-// const mainFormInput = mainForm.elements.nameInput;
-// console.log(mainFormInput.form);
-// */
-// const mainFormRadioButtons = mainForm.nameRadio;
-//const mainFormRadioButtons = mainForm.elements.nameRadio;
-// console.log(mainFormRadioButtons);
-// console.log(mainFormRadioButtons.form);
-// почему то не работает
-
-// const mainFormTextarea = mainForm.nameTextarea;
-/*
-console.log(mainFormInput.value);
-console.log(mainFormTextarea.value);
-mainFormInput.value = 'Пока!';
-mainFormTextarea.value='До встречи!';
+let arr=dna.split('');
+console.log(arr);
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === 'T') {
+			console.log('да');
+			arr[i]='U';
+			// console.log(`Индекс ${i} значение ${arr[i]}`);
+		} 
+		// console.log(arr);
+	}
+	let res=arr;
+	let result = res.join('') ;
+	return result;
+	console.log(result);
+	
+}
+DNAtoRNA('TATT');
 */
 /*
-const mainFormCheckBox = mainForm.nameCheck;
-const mainFormFile = mainForm.nameFile;
-
-console.log(mainFormRadioButtons[0].value);
-console.log(mainFormRadioButtons[1].value);
-console.log(mainFormRadioButtons[0].checked);
-console.log(mainFormRadioButtons[1].checked);
-
-console.log(mainFormCheckBox.value);
-console.log(mainFormCheckBox.checked);
-
-mainFormRadioButtons[0].value = "left";
-mainFormRadioButtons[1].value = "right";
-mainFormRadioButtons[1].checked = true;
-
-mainFormCheckBox.value="save";
-mainFormCheckBox.checked = true;
-
-mainFormFile.value="123";
-*/
-/*
-const mainFormSelect=mainForm.nameSelect;
-console.log(mainFormSelect.options);
-
-const mainFormSelectIndex=mainFormSelect.selectedIndex;
-console.log(mainFormSelectIndex);
-
-const mainFormSelectValue=mainFormSelect.value;
-console.log(mainFormSelectValue);
-
-const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
-console.log(mainFormSelectText);
-*/
-// const mainForm = document.forms.main;
-// const mainFormSelect = mainForm.nameSelect;
-// const mainFormSelectIndex = mainFormSelect.selectedIndex;
-// mainFormSelect.options[1].selected=true;
-// console.log(mainFormSelect.options[2].index);
-// console.log(mainFormSelect.options[2].text);
-
-// mainFormSelect.selectedIndex=2;
-// mainFormSelect.value=1;
-/*
-let newOption = new Option('100', '4', true, true);
-mainFormSelect.append(newOption);
-
-let selectedOptions = Array.from(mainFormSelect.options).filter(option => option.selected).map(option => option.value);
-console.log(selectedOptions);
-*/
-
-// const mainForm = document.forms.main;
-// const mainFormInput = mainForm.nameInput;
-
-// const mainFormInputPlaceholder = mainFormInput.placeholder;
-
-// mainFormInput.addEventListener('focus', (e) => mainFormInput.placeholder = '');
-
-// mainFormInput.addEventListener('blur', (e) => mainFormInput.placeholder = mainFormInputPlaceholder);
-/*
-mainFormInput.focus();
-setInterval(() => {
-	mainFormInput.focus();
-},3000);
-
-
-setInterval(() => {
-	mainFormInput.blur();
-}, 6000);
-*/
-/*
-const lesson = document.querySelector('.lesson');
-
-lesson.addEventListener('focus', function (e) {
-	lesson.classList.add('_focus');
-	console.log('DIV lesson в фокусе!');
-});
-
-lesson.addEventListener('blur', function (e) {
-	lesson.classList.remove('_focus');
-});
-
-console.log(document.activeElement);
-*/
-/*
-const mainForm = document.forms.main;
-
-mainForm.addEventListener('focusin', (e) => {
-	mainForm.classList.add('_active');
-},
-
-// {"capture":true}
-
-);
-*/
-/*
-const mainForm = document.forms.main;
-
-const mainFormInput = mainForm.nameInput;
-const mainFormSelect = mainForm.nameSelect;
-const mainFormFile = mainForm.nameFile;
-
-mainFormInput.addEventListener('change', () => {
-	console.log('Сработало change в input');
-});
-mainFormSelect.addEventListener('change', () => {
-	console.log('Сработало change в select');
-});
-mainFormFile.addEventListener('change', () => {
-	console.log('Сработало change в file');
-});
-*/
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-mainFormInput.addEventListener('input', () => {
-	console.log(`value: ${mainFormInput.value}`);
-});
-*/
-/*
-const txtItem = document.querySelector('.textarea__item');
-const txtItemLimit = txtItem.getAttribute('maxlength');
-const txtCounter = document.querySelector('.textarea__counter span');
-
-txtCounter.innerHTML = txtItemLimit;
-txtItem.addEventListener('input', tetSetCounter);
-
-function tetSetCounter() {
-	const txtCounterResult = txtItemLimit - txtItem.value.length;
-	txtCounter.innerHTML = txtCounterResult;
+function rentalCarCost(d) {
+	// Your solution here
+	cost = 40;
+	let result;
+	if (d >= 7) {
+		result = 40 * d - 50;
+	} else if (d >= 3 && d <= 6) {
+		result = 40 * d - 20;
+	} else {
+		result = 40 * d;
+	}
+	return result;
+	console.log(result);
 }
 
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-*/
-
-/*
-mainFormInput.addEventListener('copy', (e) => {
-	console.log('Копируем');
-});
-
-mainFormInput.addEventListener('paste', (e) => {
-	console.log('Вставляем');
-});
-
-mainFormInput.addEventListener('cut', (e) => {
-	console.log('Вырезаем');
-});
-
-mainFormInput.addEventListener('paste', function (e) {
-	console.log('Нельзя вставить');
-	e.preventDefault();
-});
+rentalCarCost(6);
 */
 /*
-mainForm.addEventListener('submit', (e) => {
-	console.log('Форма отправляется...');
-	if (!mainFormInput.value) {
-		console.log('Поле nameInput не заполнено');
-		e.preventDefault;
+function greet(name, owner) {
+	// Add code here
+	if (owner === 'boss') {
+		// console.log(name + ' Hello boss');
+		return name + ' Hello boss';
+
+	} else {
+		// console.log(name + ' Hello guest');
+		return name + 'Hello guest';
 	}
-})
-*/
-/*
-mainFormInput.addEventListener('blur', function(e){
-	mainForm.submit();
-});
-*/
-/*
-const mainForm=document.forms.main;
-const mainFormInput=mainForm.nameInput;
-mainForm.addEventListener('submit',function(e) {
-	if(emailTest(mainFormInput)){
-		mainFormInput.parentElement.insertAdjacentHTML(
-			'beforeend',
-			`<div class='main-form__error'>
-			Введите email</div>`
-		);
-		e.preventDefault();
-	}
-});
-
-mainFormInput.addEventListener('focus',function(e) {
-	if(mainFormInput.nextElementSibling){
-		mainFormInput.nextElementSibling.remove();
-	}
-});
-
-function emailTest(input){
-	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
-*/
-
-const mainForm = document.forms.main;
-const mainFormFile = mainForm.nameFile;
-
-mainFormFile.addEventListener("change", function (e) {
-	let selectedFile = mainFormFile.files[0];
-
-	// Получаем URL изображения
-	let fileUrl = URL.createObjectURL(selectedFile);
-
-	mainFormFile.parentElement.insertAdjacentHTML(
-		"beforeend",
-		`<div class="main-form__image">
-			<img alt="" title="${selectedFile.name}" src="${fileUrl}">
-		</div>`
-	);
-});
-
-
-// const regexp = /Игорь/;
-// const str = 'Привет, меня зовут Игорь. Мне 23 года.';
-
-// const regexp = /Игорь\./;
-// const str = 'Привет, меня зовут Игорь! Мне 23 года.';
-
-// const regexp = /\d\d\S/;
-// const str = 'Привет, меня зовут Игорь! Тебе 20sf,? Мне 23 года.';
-
-// const regexp = /[^ЮИ]ра/;
-// const str = 'Это Ира и Юра сказали Ура!';
-// const regexp = /[^а-вг-ж]/;
-// const str = 'абвгдежзийклмнопрстуфчцхъыьэюя';
-
-// const regexp = /\d{3,4}?/;
-// const str = 'У меня тлько 50 не хватает еще 10000';
-
-// const regexp = /\d{3,}?/;
-// const str = 'У меня тлько 50 не хватает еще 10000';
-
-// const regexp = /colou?r/;
-// const str = 'What color is the car?';
-
-// const regexp = /colou?r/;
-// const str = 'What colour is the car?';
-
-// const regexp = /\d*?/;
-// const str = '0123456789';
-
-// const regexp = /\d+?/;
-// const str = '0123456789'; 
-// const regexp= /\d{6}/;
-// const str ='1,2, 3, 4,  5,6  ,  7  ,8';
-// const str = '... телефон 123456. Его почта...';
-
-// console.log(str.match(regexp));
-
-// const result = str.split('regexp');
-// const result = str.split(',');
-// const result = str.search(regexp);
-// console.log(result);
-
-/*
-const regexp = /./g;
-const str = 'a\nb';
+greet('Daniel', 'boss');
 */
 /*
-const regexp = /./gs;
-const str = 'a\nb';
+function findShort(s) {
+	let arr = s.split(' ');
+	// console.log(arr);
+	let arrLength = [];
+	arr.forEach((item, index) => {
+		arrLength[index] = arr[index].length;
+	});
+	// console.log(arrLength);
+	let result = Math.min.apply(null,arrLength);
+	// console.log(result);
+	return result;
+}
+
+findShort('bitcoin take over the world maybe who knows perhaps');
 */
 /*
-const regexp = new RegExp('.','gs');
-const str = 'a\nb';
+function century(year) {
+	// Finish this :)
+	let result = Math.ceil(year / 100);
+	console.log(result);
+	// return;
+}
+century(582139); //5822
+century(1705);
+century(1900);
+century(1601);
+century(2000);
+century(89);
 */
 /*
-const regexp = /кот/gi;
-const str = 'Кот теракотового цвета кушает котлету.';
+function numberToString(num) {
+	// Return a string of the number here!
+	let result = String(num);
+	//console.log(result);
+	return result;
+}
 
-
-
-
-
-
-// /*
-const result = Array.from(str.matchAll(regexp));
-console.log(result);
-console.log(regexp.lastIndex);
-
-let result=regexp.exec(str);
-console.log(result, regexp.last);
-result=regexp.exec(str);
-console.log(result, regexp.last);
-result=regexp.exec(str);
-console.log(result, regexp.last);
-result=regexp.exec(str);
-console.log(result, regexp.last);
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//ДОМАШКА
-/*
-1. Изучить теорию
-2. Решить задачу:
+numberToString(666);
 */
 /*
-- Создайте форму и отработайте на ней все события и методы из этого урока
-- Добавьте к текстовым полям формы валидацию заполнения полей
-и счетчик символов
-- Запретите вставку текста в объект textarea этой формы
-*/
+function highAndLow(numbers) {
+	// ...
+	let arr = numbers.split(' ');
+	let max = Math.max.apply(null,arr);
+	let min = Math.min.apply(null, arr);
+	let arr2 = max +' '+ min;
+	console.log(arr2);
+	return arr2;
 
-
-
-
-//========================================================================================================================================================
-//========================================================================================================================================================
-
-
-// Свойства и методы форм
-
-// Коллекция всех форм на странице
-// document.forms
-
-// Получить коллекцию всех форм на странице
-// console.log(document.forms);
-
-
-// Получить конкретную форму на странице
-/*
-const mainForm = document.forms[0];
-console.log(mainForm);
-*/
-
-// Атрибут name
-/*
-const mainForm = document.forms.main;
-console.log(mainForm);
-*/
-
-//----
-
-// Разница между document.forms и document.querySelectorAll('form');
-
-/*
-// Коллекция
-console.log(document.querySelectorAll('form'));
-// Живая коллекции
-console.log(document.forms);
-
-
-// Добавление новой формы
-document.body.insertAdjacentHTML(
-	"beforeend",
-	`<form name="some" class="some-form" action="#"></form>`
-);
-*/
-
-//====================================
-
-// document.forms.elements
-
-//const mainForm = document.forms.main;
-//console.log(mainForm.elements);
-
-/*
-// Получаем элемент с именем nameInput
-const mainFormInput = mainForm.elements.nameInput;
-// или mainForm.nameInput
-console.log(mainFormInput);
+}
+highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4');
 */
 /*
-// Получаем коллекцию с именем nameRadio
-const mainFormRadioButtons = mainForm.nameRadio;
-// или mainForm.elements.nameRadio
-console.log(mainFormRadioButtons);
-*/
+function filter_list(l) {
+	// Return a new array with the strings filtered out
+	//console.log(typeof l);
+	let arr = [];
+	let i = 0;
+	l.forEach((item) => {
+		if (typeof item === 'number') {
 
-// Обратная ссылка
-// element.form
+			arr[i] = item;
+			i++;
+		}
 
-// Получаем форму элемента
-//console.log(mainFormInput.form);
+	});
+	return arr;
+	console.log(arr);
 
-//---------------
 
-// Элементы форм
-
-// Работа с input и textarea
-/*
-Значение можно получить через свойство input.value(строка)
-или input.checked(булево значение) для чекбоксов и радиокнопок.
-*/
-
-//const mainForm = document.forms.main;
-
-/*
-const mainFormInput = mainForm.nameInput;
-const mainFormTextarea = mainForm.nameTextarea;
+}
+filter_list([1, 2, 'a', 'b']);
 */
 /*
-// Получить значение (седержимое) поля
-console.log(mainFormInput.value);
-// Получить значение (седержимое) текстового поля
-console.log(mainFormTextarea.value);
-*/
+function past(h, m, s) {
+	//#Happy Coding! ^_^
+	let summ;
+	let hours = h * 60 * 60 * 1000;
+	let min = m * 60 * 1000;
+	let sec = s * 1000;
+	summ = hours + min + sec;
+	console.log(summ);
+	return summ;
+}
 
-/*
-// Присвоить значение (седержимое) поля
-mainFormInput.value = "Пока";
-// Присвоить значение (седержимое) текстового поля
-mainFormTextarea.value = "До встречи!";
-*/
-
-/*
-const mainFormRadioButtons = mainForm.nameRadio;
-const mainFormCheckBox = mainForm.nameCheck;
-const mainFormFile = mainForm.nameFile;
-*/
-
-// Получить значение поля type radio
-/*
-console.log(mainFormRadioButtons[0].value);
-console.log(mainFormRadioButtons[1].value);
-console.log(mainFormRadioButtons[0].checked);
-console.log(mainFormRadioButtons[1].checked);
-*/
-
-// Получить значение поля type checkbox
-/*
-console.log(mainFormCheckBox.value);
-console.log(mainFormCheckBox.checked);
-*/
-
-// Получить значение поля type file
-//console.log(mainFormFile.value);
-
-
-// Назначить значение поля type radio
-/*
-mainFormRadioButtons[0].value = "left";
-mainFormRadioButtons[1].value = "right";
-mainFormRadioButtons[1].checked = true;
-*/
-
-// Назначить значение поля type checkbox
-/*
-mainFormCheckBox.value = "save";
-mainFormCheckBox.checked = true;
-*/
-
-// Назначить значение поля type file
-//mainFormFile.value = "";
-
-//---------------
-
-// Работа с select и option
-
-/*
-Элемент <select> имеет 3 важных свойства:
-select.options – коллекция из подэлементов <option>,
-select.value – значение выбранного в данный момент <option>,
-select.selectedIndex – номер выбранного <option>.
-
-Они дают три разных способа установить значение в <select>:
-Найти соответствующий элемент <option> и установить
-в option.selected значение true.
-Установить в select.value значение нужного <option>.
-Установить в select.selectedIndex номер нужного <option>.
-
-Первый способ наиболее понятный,
-но (2) и (3) являются более удобными при работе.
-*/
-
-
-/*
-
-const mainForm = document.forms.main;
-const mainFormSelect = mainForm.nameSelect;
-
-// Получить все options
-console.log(mainFormSelect.options);
-
-// Получить индекс выбранного option
-const mainFormSelectIndex = mainFormSelect.selectedIndex;
-console.log(mainFormSelectIndex);
-// Получить значение выбранного option
-const mainFormSelectValue = mainFormSelect.value;
-console.log(mainFormSelectValue);
-// Получить текст выбранного option
-const mainFormSelectText = mainFormSelect.options[mainFormSelectIndex].text;
-console.log(mainFormSelectText);
-*/
-
-
-// Выбрать некий option
-// mainFormSelect.options[1].selected = true;
-// mainFormSelect.selectedIndex = 1;
-// mainFormSelect.value = 2;
-
-
-/*
-Параметры:
-text – текст внутри <option>,
-value – значение,
-defaultSelected – если true, то ставится HTML - атрибут selected,
-selected – если true, то элемент <option> будет выбранным.
-
-Тут может быть небольшая путаница с defaultSelected и selected.
-Всё просто: defaultSelected задаёт HTML - атрибут,
-его можно получить как option.getAttribute('selected'),
-а selected – выбрано значение или нет,
-именно его важно поставить правильно.
-Впрочем, обычно ставят оба этих значения
-в true или не ставят вовсе(т.е.false).
-*/
-
-/*
-Элементы <option> имеют свойства:
-//Выбрана ли опция.
-option.selected
-//Номер опции среди других в списке <select>.
-option.index
-//Содержимое опции (то, что видит посетитель).
-option.text
-*/
-
-
-// Добавить новую опцию
-// new Option
-// option = new Option(text, value, defaultSelected, selected);
-
-/*
-Параметры:
-text – текст внутри < option >,
-value – значение,
-defaultSelected – если true, то ставится HTML - атрибут selected,
-selected – если true, то элемент < option > будет выбранным.
-*/
-
-// Пример
-/*
-let newOption = new Option("100", "4", true, true);
-mainFormSelect.append(newOption);
-*/
-
-/*
-Элементы <option> имеют свойства:
-//Выбрана ли опция.
-option.selected
-//Номер опции среди других в списке <select>.
-option.index
-//Содержимое опции (то, что видит посетитель).
-option.text
-*/
-
-
-//---
-
-/*
-// Мультивыбор
-
-// получаем все выбранные значения из select с multiple
-let selectedOptions = Array.from(mainFormSelect.options)
-	.filter(option => option.selected)
-	.map(option => option.value);
-
-console.log(selectedOptions);
-*/
-
-//=============================================
-
-// События форм и их элементов
-
-// Фокусировка focus и blur
-/*
-Элемент получает фокус (focus), когда пользователь кликает по нему
-или использует клавишу Tab.
-Также существует HTML - атрибут autofocus, который устанавливает
-фокус на элемент, когда страница загружается.
-Есть и другие способы получения фокуса.
-
-Фокусировка обычно означает:
-«приготовься к вводу данных на этом элементе»,
-это хороший момент, чтобы инициализовать или загрузить что-нибудь.
-
-Момент потери фокуса (blur) - это момент,
-когда пользователь кликает куда-то ещё или нажимает Tab,
-чтобы переключиться на следующее поле формы.
-Есть другие причины потери фокуса.
-
-В момент события "потеря фокуса" мы можем выполнить
-проверку введённых данных или даже отправить
-эти данные на сервер и так далее.
-*/
-
-// ----
-
-// Cобытия focus и blur
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-const mainFormInputPlaceholder = mainFormInput.placeholder;
-
-mainFormInput.addEventListener("focus", function (e) {
-	mainFormInput.placeholder = "";
-});
-mainFormInput.addEventListener("blur", function (e) {
-	mainFormInput.placeholder = mainFormInputPlaceholder;
-});
+ past(0, 1, 1);
 */
 /*
-Дейсвия могут быть самыми разными:
-валидация поля, отправка формы и т.д.
-*/
-
-// ----
-
-/*
-// Методы elem.focus() и elem.blur()
-// устанавливают или снимают фокус.
-
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-mainFormInput.focus();
-
-setTimeout(() => {
-	mainFormInput.blur();
-}, 3000);
-*/
-
-
-// ----
-
-/*
-Фокусировка на любом элементе с помощью tabindex
-
-Многие элементы по умолчанию не поддерживают фокусировку.
-Какие именно – зависит от браузера, но одно всегда верно:
-поддержка focus/blur гарантирована для элементов,
-с которыми посетитель может взаимодействовать:
-<button>, <input>, <select>, <a> и т.д.
-
-С другой стороны, элементы форматирования
-<div>, <span> – по умолчанию не могут получить фокус.
-
-Метод elem.focus() не работает для них,
-и события focus/blur никогда не срабатывают.
-
-Это можно изменить HTML-атрибутом tabindex.
-*/
-
-/*
-tabindex = "0" ставит элемент в один ряд
-с элементами без tabindex.То есть, при переключении
-такие элементы будут после элементов с tabindex ≥ 1.
-Обычно используется, чтобы включить фокусировку на элементе,
-но не менять порядок переключения.Чтобы элемент мог
-участвовать в форме наравне с обычными <input>.
-
-tabindex="-1" позволяет фокусироваться на элементе только программно.
-Клавиша Tab проигнорирует такой элемент,
-но метод elem.focus() будет действовать.
-*/
-
-/*
-const lesson = document.querySelector('.lesson');
-
-// Реагируем на событие "в фокусе"
-lesson.addEventListener("focus", function (e) {
-	lesson.classList.add('_focus');
-	console.log('Див lesson в фокусе!');
-});
-// Реагируем на событие "потеря фокуса"
-lesson.addEventListener("blur", function (e) {
-	lesson.classList.remove('_focus');
-});
-*/
-
-// ---
-
-/*
-Текущий элемент с фокусом можно получить
-из document.activeElement.
-*/
-//console.log(document.activeElement);
-
-// ---
-
-// События focusin и focusout
-// Работают также как и focus/blur но при этом всплывают
-/*
-const mainForm = document.forms.main;
-
-// Хотим установить фокус на форме при работе с элементами
-mainForm.addEventListener("focusin", function (e) {
-	mainForm.classList.add('_active');
-});
-*/
-// Споймать на этапе погружения
-//, { "capture": true }
-
-
-//---------------------
-
-// Событие change
-// Срабатывает по окончании изменения элемента.
-
-/*
-В текстовых input и textarea работает также как
-и блур (потеря фокуса), но в select, radio, checkbox и т.д. сразу
-*/
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-const mainFormSelect = mainForm.nameSelect;
-const mainFormFile = mainForm.nameFile;
-
-mainFormInput.addEventListener("change", function (e) {
-	console.log('Сработало change в input');
-});
-mainFormSelect.addEventListener("change", function (e) {
-	console.log('Сработало change в select');
-});
-mainFormFile.addEventListener("change", function (e) {
-	console.log('Сработало change в file');
-});
-*/
-
-//---------------------
-
-// Событие input
-/*
-Событие input срабатывает каждый раз при изменении значения.
-В отличие от событий клавиатуры, оно работает
-при любых изменениях значений, даже если они
-не связаны с клавиатурными действиями:
-вставка с помощью мыши или распознавание речи при диктовке текста.
-*/
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-mainFormInput.addEventListener("input", function (event) {
-	console.log(`value: ${mainFormInput.value}`);
-});
-*/
-
-//---------------------
-
-// События cut, copy, paste
-// Эти события происходят при вырезании/копировании/вставке данных.
-
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-mainFormInput.addEventListener("copy", function (event) {
-	console.log(`Копируем`);
-});
-mainFormInput.addEventListener("paste", function (event) {
-	console.log(`Вставляем`);
-});
-mainFormInput.addEventListener("cut", function (event) {
-	console.log(`Вырезаем`);
-});
-*/
-/*
-mainFormInput.addEventListener("paste", function (event) {
-	console.log(`Нельзя вставить`);
-	event.preventDefault();
-});
-*/
-
-//---------------------
-
-/*
-При отправке формы срабатывает событие submit,
-оно обычно используется для проверки (валидации)
-формы перед её отправкой на сервер или для
-предотвращения отправки и обработки её с помощью JavaScript.
-*/
-/*
-Есть два основных способа отправить форму:
-1) нажать кнопку <input type="submit"> или <button type="submit"></button>.
-2) нажать Enter, находясь на каком-нибудь поле.
-*/
-/*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-mainForm.addEventListener("submit", function (event) {
-	console.log('Форма отправляется...');
-
-	// Проверяем поля и если есть ошибки отменяем отправку
-	if (!mainFormInput.value) {
-		console.log('Поле nameInput не заполнено');
-		event.preventDefault();
+function simpleMultiplication(number) {
+	// your code........
+	let result;
+	let even = number % 2;
+	//console.log(even);
+	if (even == 0) {
+		result = number * 8;
+	} else {
+		result = number * 9;
 	}
-});
-*/
-
-//---------
-
-
-// События форм и их элементов
-
-// Отправка формы - событие и метод submit
-/*
-Чтобы отправить форму на сервер вручную,
-мы можем вызвать метод form.submit().
+	//console.log(result);
+	return result;
+	// (result === 0) ? result = number * 8 : result = number *9;
+}
+simpleMultiplication(2);
 */
 /*
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
-
-// Отправляем форму при потере фокуса у nameInput
-mainFormInput.addEventListener("blur", function (e) {
-	mainForm.submit();
-});
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+	// TODO
+	let result;
+	result = (distanceToPump <= mpg * fuelLeft) ? true : false;
+	console.log(result);
+	return (distanceToPump <= mpg * fuelLeft) ? true : false;
+};
+zeroFuel(100, 50, 1);
 */
-
-
-//========================================================================================================================================================
-
-// Практические примеры:
-
 /*
-// Проверяем ввод email, выводим ошибку
-const mainForm = document.forms.main;
-const mainFormInput = mainForm.nameInput;
+const quarterOf = (month) => {
+	// Your code here
 
-mainForm.addEventListener("submit", function (event) {
-	if (emailTest(mainFormInput)) {
-		mainFormInput.parentElement.insertAdjacentHTML(
-			"beforeend",
-			`<div class="main-form__error">
-				Введите email
-			</div>`
-		);
-		event.preventDefault();
+	let result = (month >= 1 && month <= 3) ? 1 :
+		(month >= 4 && month <= 6) ? 2 :
+		(month >= 7 && month <= 9) ? 3 : 4;
+	return result;
+
+};
+*/
+/*
+const rps = (p1, p2) => {
+	let player1 = 1;
+	let player2 = 2;
+	let n;
+	
+	//win p1
+	if (p1 === p2) {
+		console.log('Draw!');
+		return 'Draw!';
+	} else if (p1 === 'scissors' && p2 === 'paper') {
+		console.log(player1);
+		 n = player1;
+	} else if (p1 === 'scissors' && p2 === 'rock') {
+		console.log(player2);
+		 n = player2;
+	} else if (p1 === 'paper' && p2 === 'scissors') {
+			console.log(player2);
+			 n = player2;		
+	} else if (p1 === 'paper' && p2 === 'rock') {
+		console.log(player1);
+		 n = player1;
+	} else if (p1 === 'rock' && p2 === 'scissors') {
+		console.log(player1);
+		 n = player1;
+	} else if (p1 === 'rock' && p2 === 'paper') {
+		console.log(player2);
+		 n = player2;
 	}
-});
-
-mainFormInput.addEventListener("focus", function (event) {
-	if (mainFormInput.nextElementSibling) {
-		mainFormInput.nextElementSibling.remove();
-	}
-});
-
-//Функция теста email
-function emailTest(input) {
-	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-}*/
-
-// ----
-
-// Практические примеры:
-/*
-// Выводим картинку после выбора
-const mainForm = document.forms.main;
-const mainFormFile = mainForm.nameFile;
-
-mainFormFile.addEventListener("change", function (e) {
-	let selectedFile = mainFormFile.files[0];
-
-	// Получаем URL изображения
-	let fileUrl = URL.createObjectURL(selectedFile);
-
-	mainFormFile.parentElement.insertAdjacentHTML(
-		"beforeend",
-		`<div class="main-form__image">
-			<img alt="" title="${selectedFile.name}" src="${fileUrl}">
-		</div>`
-	);
-});
+	const getMsg = (n) => `Player ${n} won!`;
+	return getMsg(n);
+};
+rps('rock', 'scissors');
 */
-
-
-//========================================================================================================================================================
-//========================================================================================================================================================
-//========================================================================================================================================================
-//========================================================================================================================================================
+function correct(string) {
+	// your code here
+	let arr = string.split('');
+	let result = [];
+	arr.forEach((element, index) => {
+		(element === '5') ? result[index] = 'S':
+			(element === '0') ? result[index] = 'O' :
+			(element === '1') ? result[index] = 'I' :
+			result[index] = arr[index];
+	});
+	let arrstr = result.join('');
+	console.log(arrstr);
+	return arrstr;
+}
+correct('L0ND5N');

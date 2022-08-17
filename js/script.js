@@ -220,6 +220,7 @@ const rps = (p1, p2) => {
 };
 rps('rock', 'scissors');
 */
+/*
 function correct(string) {
 	// your code here
 	let arr = string.split('');
@@ -235,3 +236,93 @@ function correct(string) {
 	return arrstr;
 }
 correct('L0ND5N');
+*/
+/*
+function feast(beast, dish) {
+	//your function here
+	let result = (beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) ? true : false;
+	console.log(result);
+	return result;
+}
+feast("brown bear", "bear claw");
+*/
+/*
+var uniqueInOrder = function (iterable) {
+	//your code here - remember iterable can be a string or an array
+	let arr = iterable.split('');
+	let arr2 = iterable.split('');
+	console.log(arr);
+	let newArr = [];
+	let summ;
+	for (let i = 0; i < arr.length; i++) {
+		summ=0;
+		for (let j = i; j < arr.length; j++) {
+			if (arr[i] === arr[j]) {
+summ+=1;
+				// console.log(`Значение ${arr[i]} повторилось ${summ} раз`);
+				// arr1.splice(1, arr1[j]);
+			}
+			
+			// newArr.push(arr1[i]);
+		}
+		console.log(`Значение ${arr[i]} повторилось ${summ} раз`);
+		if(summ===1){
+			newArr.splice(1,0,arr[i]);
+		}
+	}
+	console.log(newArr);
+};
+uniqueInOrder('AAAABBBCCDAABBB');
+*/
+/*
+function abbrevName(name) {
+
+	// code away
+	let arr=name.split(' ');
+	console.log(arr);
+	let array1 = arr[0];
+		console.log(array1);
+	let array2 = arr[1];
+	console.log(array2);
+	console.log();
+	let str1 = array1[0].toUpperCase();
+		// console.log(str1);
+	let str2 = array2[0].toUpperCase();
+		let result=(str1+'.'+str2);
+		console.log(result);
+		return result;
+}
+abbrevName("uDkDXMITiDln chRTNebfTLkRVtnz"); //, "S.H";
+*/
+/*
+function oddOrEven(array) {
+	//enter code here
+	let summ = 0;
+	if (array.length) {
+		array.forEach(element => {
+			summ += element;
+		});
+		let result = summ % 2;
+		if (result === 0) {
+			// console.log('even');
+			return 'even';
+		} else {
+			// console.log('odd');
+			return 'odd';
+		}
+	} else
+		console.log('even');
+	return 'even';
+}
+oddOrEven([0]);
+oddOrEven([-1023, 1, -2]);
+oddOrEven([1023, 1, 3]);
+*/
+
+function smash(words) {
+	let arr=[];
+	arr = words.join(" ");
+	//console.log(arr);
+	return arr;
+};
+smash(["hello", "world"])

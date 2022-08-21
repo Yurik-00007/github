@@ -856,10 +856,10 @@ function XO(str) {
 	let rep = str1.includes('xx');
 	let rep2 = str1.includes('oo');
 	if ((rep && rep2) || (!(rep && rep2))) {
-result=true;
+		result = true;
 		console.log(result);
 		return result;
-	}else {
+	} else {
 		result = false;
 		console.log(result);
 		return result;
@@ -875,9 +875,249 @@ XO("ooxXm") => true
 XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 XO("zzoo") => false
 */
+/*
 function multiply(n,m) {
 	let result = n * m;
 	console.log(result);
 	return result;
 }
 multiply(2, 3);
+*/
+/*
+function findMultiples(integer, limit) {
+	//your code here
+	let result = [];
+	let res=[];
+	let i = integer;
+	
+	for (integer; integer <= limit; integer += i) {
+		res.push(integer);
+		// console.log(integer);
+	}
+	console.log(res);
+	// result=res.split(' ');
+	// result.shift();
+	console.log(res);
+	return res;
+}
+findMultiples(5, 25);
+*/
+/*
+function contamination(text, char) {
+	// Code here ;)
+	// let l=text.length;
+	let arr = [];
+	let result;
+	arr = text.split('');
+	for (let i = 0; i < arr.length; i++) {
+		arr.splice(i, 1, char);
+	}
+	//console.log(arr);
+	result = arr.join('');
+	//console.log(result);
+	return result;
+
+}
+contamination("", "z");
+*/
+/*
+function squareDigits(num) {
+let arr=[];
+let str=String(num);
+let str2;
+let res;
+let array=str.split('');
+// console.log(array);
+array.forEach(element => {
+	arr.push(element * element);
+});
+// console.log(arr);
+str2=arr.join('');
+res=+str2;
+// console.log(res);
+
+	return res;
+}
+squareDigits(9119);
+*/
+/*
+function tribonacci(signature, n) {
+	//your code here
+	let sum = 0;
+	let arr = [];
+	let arr1 = [];
+	arr1[0] = signature[0];
+
+	if (n === 1) {
+		console.log(arr1);
+		return arr1;
+	} else if (n === 2) {
+		arr1[0] = signature[0];
+		arr1[1] = signature[1];
+		console.log(arr1);
+		return arr1;
+	} else if (n === 0) {
+		console.log(arr);
+		return arr;
+	} else {
+		for (let i = 0; i < n - 3; i++) {
+			sum = signature[i] + signature[i + 1] + signature[i + 2];
+			signature.push(sum);
+			// console.log(sum);
+		}
+		console.log(signature);
+		return signature;
+	}
+}
+tribonacci([11, 4, 11], 2); //[1, 1, 1, 3, 5, 9, 17, 31, 57, 105])
+*/
+/*
+function htmlspecialchars(formData) {
+	// Insert your code here
+	let arr=['<','>','"','&'];
+	let pos;
+	console.log(arr);
+	for (let i = 0; i < arr.length; i++) {
+		pos = formData.indexOf(arr[i]);	
+		if(pos>0)
+		console.log(pos);	
+		return;
+	}
+console.log(pos);
+}
+
+htmlspecialchars('How was "The Matrix"?  Did you like it?');
+//	'How was &quot;The Matrix&quot;?  Did you like it?');
+*/
+/*
+function switchItUp(number) {
+	//Write your own Code!
+	switch (number) {
+		case 1:
+			console.log('One');
+			return 'One';
+		case 2:
+			console.log('Two');
+			return 'Two';
+		case 3:
+			console.log('Three ');
+			return 'Three';
+		case 4:
+			console.log('Four');
+			return 'Four';
+		case 5:
+			console.log('Five');
+			return 'Five';
+		case 6:
+			console.log('Six');
+			return 'Six';
+		case 7:
+			console.log('Seven');
+			return 'Seven';
+		case 8:
+			console.log('Eight');
+			return 'Eight';
+		case 9:
+			console.log('Nine');
+			return 'Nine';
+		case 0:
+			console.log('Ziro');
+			return 'Ziro';
+
+		default:
+			break;
+	}
+}
+switchItUp(9);
+*/
+/*
+function nameShuffler(str) {
+	//Shuffle It
+	let arr=str.split(' ');
+	let res=arr.reverse();
+	let result=res.join(' ');
+	// console.log(result);
+	return result;
+}
+nameShuffler("john McClane");
+*/
+/*
+function invert(array) {
+	let arr=[];
+	array.forEach((element,index) => {
+		arr[index] = -element;
+	});
+	console.log(arr);
+	return arr;
+}
+invert([1, 2, 0, 4, 5]);
+*/
+/*
+function lovefunc(flower1, flower2) {
+	// moment of truth
+	let even = flower1 % 2;
+	let odd = flower2 % 2;
+
+	let result = (even === 0 && (!(odd === 0)) || (!(even === 0)) && odd === 0) ? true : false;
+	//console.log(result);
+	return result;
+}
+lovefunc(1, 4);
+*/
+/*
+function getSum(a, b) {
+	//Good luck!
+	let arr=[];
+	let sum=0;
+	if(a===b){
+		console.log(a);
+		return a;
+	}else if(a>b){
+		console.log(b);
+		return b;
+	}else{
+	for (let i = a,j=0; i <= b; i++,j++) {
+		arr[j]=i;
+	}
+	console.log(arr);
+	arr.forEach(element => {
+		sum += element;
+	});
+	console.log(sum);
+	return sum;
+}
+}
+getSum(68, -15);
+*/
+/*
+function positiveSum(arr) {
+let summ=0;
+	arr.forEach(element => {
+		if (element>0)
+	summ+=element;
+	else sum;
+});
+console.log(summ);
+return summ;
+}
+
+positiveSum([]);
+*/
+/*
+function sumMix(x) {
+	let summ = 0;
+	x.forEach(element => {		
+			summ += +element;
+	});
+	console.log(summ);
+	return summ;
+}
+
+sumMix([9, 3, '7', '3']);
+*/
+function maps(x) {
+let res = x.map(item => item * 2);
+console.log(res);
+	return res;
+}
+maps([9, 3, 7, 3]);
